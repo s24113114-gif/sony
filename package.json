@@ -1,0 +1,16 @@
+{
+  "name": "241131114",
+  "version": "1.0.0",
+  "description": "Sony 數位產品展示與管理後台系統",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
