@@ -3,7 +3,6 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 const lenses = require('./data/lens.json');
 
 
@@ -14,7 +13,6 @@ app.use((req, res, next) => {
     console.log(`Log saved: ${req.method} ${req.url}`);
     next();
 });
-
 
 app.use(express.static('public'));
 
@@ -44,9 +42,10 @@ app.get('/admin', (req, res) => {
 });
 
 
-app.all('/.*$/', (req, res) => {
+app.use((req, res) => {
     res.status(404).send('<h1>404 Not Found (抱歉，路徑不存在)</h1>');
 });
+
 
 
 app.listen(PORT, () => {
